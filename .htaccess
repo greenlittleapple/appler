@@ -1,0 +1,98 @@
+# Do not remove this line, otherwise mod_rewrite rules will stop working
+
+RewriteBase /
+
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
+
+# Compress compressible fonts
+AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresDefault "access plus 2 days"
+
+# Add a far future Expires header for fonts
+ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+ExpiresByType application/x-font-ttf "access plus 1 year"
+ExpiresByType application/x-font-opentype "access plus 1 year"
+ExpiresByType application/x-font-woff "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+## EXPIRES CACHING ##
+
+################ Expires Control ################
+<FilesMatch "\.(gif|jpg|jpeg|png|swf)$">
+# 2 weeks
+ExpiresDefault A1209600
+Header append Cache-Control "public"
+</FilesMatch>
+<FilesMatch "\.(xml|txt|html)$">
+# 2 hours
+ExpiresDefault A7200
+Header append Cache-Control "proxy-revalidate"
+</FilesMatch>
+<FilesMatch "\.(js|css)$">
+# 3 days
+ExpiresDefault A259200
+Header append Cache-Control "proxy-revalidate"
+</FilesMatch>
+
+ErrorDocument 403 /error.html
+ErrorDocument 404 /error.html
+ErrorDocument 500 /error.html
+
+<IfModule mod_deflate.c>
+    #The following line is enough for .js and .css
+    AddOutputFilter DEFLATE js css
+
+    #The following line also enables compression by file content type, for the following list of Content-Type:s
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml
+
+    #The following lines are to avoid bugs with some browsers
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html 
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Vary "Accept-Encoding"
+</IfModule>
+FileETag MTime Size
+
+AddHandler application/x-httpd-php5 .htm .html
+
+<FilesMatch "\.(htm|html|php)$">
+    <IfModule mod_headers.c>
+        BrowserMatch MSIE ie
+        Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+    </IfModule>
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/$ $1.html 
+
+# Forces a trailing slash to be added
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+RewriteRule ^(scripts|css|images)/(.+)\.(.+)\.(js|css|jpg|gif|png)$ $1/$2.$4 [L]
