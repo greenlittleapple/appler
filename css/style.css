@@ -19,17 +19,16 @@
     padding-left: 20px !important;
 }
 
-.navbar-inverse {
-    background-color: #1f5e2a !important;
-}
-
 .navbar-inverse .navbar-nav > li > a {
     font-weight:300;
-    font-size:16px!important
+    font-size:20px!important
+}
+
+.navbar {
+    margin-bottom: 0px !important;
 }
 
 body {
-    padding-top:53px;
     -webkit-font-smoothing:antialiased;
     -moz-font-smoothing:antialiased;
     font-smoothing:antialiased;
@@ -76,7 +75,7 @@ div.bottom-menu-inverse {
 }
 
 html {
-    overflow-y:auto
+    overflow-y:hidden
 }
 
 .open>.dropdown-menu {
@@ -128,8 +127,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.navbar-brand {
 }
 
 .navbar-brand,.navbar-nav > li > a,.navbar-inverse .navbar-toggle {
-    line-height:80px!important;
-    height:80px!important;
+    line-height:120px!important;
+    height:120px!important;
     padding-top:0!important
 }
 
