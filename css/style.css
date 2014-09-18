@@ -138,6 +138,10 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.navbar-brand {
     text-decoration: none;
 }
 
+.navbar-inverse {
+    background-color: #fff !important;
+}
+
 #title {
     text-align: center;
     color: #1f5e2a;
