@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Appler - Main</title>
+    <title>Appler - Introduction</title>
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -24,16 +24,16 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li>
                         <a href="/">Home</a>
                     </li>
                     <li>
                         <a href="/about.html">About</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Android</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/android/intro.html">1 - Introduction</a>
+                            <li class="active"><a href="/android/intro.html">1 - Introduction</a>
                             </li>
                             <li><a href="/android/chapters.html">2 - Chapters</a>
                             </li>
@@ -52,13 +52,29 @@
         <!--/.nav-collapse -->
     </div>
     <div class="container-fluid jumbotron text-center">
-        <h1>WELCOME TO APPLER</h1>
-        <p>Learn Android programming for free!</p>
+        <h1>INTRODUCTION TO JAVA</h1>
+        <p>We will go over and learn the basics of Java.</p>
     </div>
     <div class="container">
         <div class="row">
-            <p style="font-size: 24px; text-align: center;">Appler provides a simple plan that provides in-depth instructions to making Android apps. With video and text tutorials that are easy to follow, Appler can make sure learning how to make an app is as simple as it can be.</p>
-            <a href="/android/intro.html" class="btn-xxlarge btn-success center">Get Started</a>
+            <p style="font-size: 24px; text-align: center;">
+                Welcome to the first step in your journey in becoming an Android app designer! Here you will learn the basics of Java and programming. Android apps use the programming language called Java to run their code.
+            </p>
+            <h1 id="nl">Preparation</h1>
+            <p style="font-size: 24px;">
+                <b>1.</b> Download and extract Eclipse SDK, a programming interface for Java and Android apps. Download the <a href="https://dl.google.com/android/adt/adt-bundle-windows-x86-20140702.zip"><b>32-bit</b></a> or <a href="https://dl.google.com/android/adt/adt-bundle-windows-x86_64-20140702.zip"><b>64-bit</b></a> package. <br><br>
+                <b>2.</b> Run "SDK Manager" in the folder that you extracted and check "Tools" at the top and "Android 5.0 (API 21)", and click "Install packages" at the bottom.<br><br>
+                <b>3.</b> Run "eclipse.exe" in the "eclipse" folder and at the top, click Help > Install New Software. <br><br>
+                <b>3b.</b> Click "Add" on the top right and type in "ADT Plugin" for the <i>Name</i> and "https://dl-ssl.google.com/android/eclipse/" into the <i>Location</i> and click "OK". <br><br>
+                <b>3c.</b> In the next dialog, check "Developer Tools" and click "Next", then "Next" again, and finally accept the agreements and click "Finish" and let it install. <br><br>
+                <b>3d.</b> Restart Eclipse when prompted.<br><br>
+                <b>4.</b> Go to File > New on the top left and verify that "Android Application Project" appears. <br><br>
+                <b>5.</b> Click "Java Project", put in a Project Name, and click Finish. On the left, an icon followed by your Project Name should appear. Right click it, hover over "New", and click "Class" on the right. Name the class.<br><br>
+                <b>6.</b> Type in the line between the 2 brackets :<br><i>public static void main(String[] args) {<br><br>
+	}<br><br></i>
+                <b>7.</b> You are now ready to learn Java.
+                <a href="chapters.html" class="btn-xlarge btn-success" style="float: right">Head on to the Chapters --></a>
+            </p>
         </div>
         &nbsp;
         

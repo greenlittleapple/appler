@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Appler - Arrays</title>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/flat-ui.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        function success() {
+            alert("Correct!");
+            document.getElementById("submitButton").disabled = false;
+            document.getElementById("submitButton").className = "btn-xlarge btn-success";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <img src="/images/resized.png" style="width: 50px; height: auto; float: left; margin-right: 9px; margin-top: 35px;">
+                </a><a class="navbar-brand" href="/" style="color: #27AE60">APPLER</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about.html">About</a>
+                    </li>
+                    <li class="active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Android</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/android/intro.html">1 - Introduction</a>
+                            </li>
+                            <li class="active"><a href="/android/chapters.html">2 - Chapters</a>
+                            </li>
+                            <li><a href="/android/practice.html">3 - Practice Exercises</a>
+                            </li>
+                            <li><a href="/android/android.html">4 - Android Basics</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    <div class="container-fluid jumbotron text-center">
+        <h1>ARRAYS</h1>
+        <p>Learn about ways to store data</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 id="nl">Arrays</h1>
+            <p style="font-size: 24px">Arrays are a great way to store large amounts of a single type of information. They are similar to dictionaries in that they store data and then that information can be accessed by going to a certain location. They also are similar due to the fact that they both only store one type of data, as dictionaries hold words while arrays can hold ints, doubles, etc. Arrays eliminate the need to declare individual variables for every single bit of information you want to store, as you can just put all of it into one place and then you can easily access them. Just as dictionaries store information in pages, arrays keep their data in indices (index for singular). Keep in mind that the index numbers start with zero being the first index, one being the second, etc. Creating a reference to an array is as simple as the following:<br>
+
+<i>Datatype [] name;<br></i>
+
+Datatype refers to what type of information is going to be stored, ie ints, floats, etc. The [] is there to signify that it’s an array and the name is simply the name of the array. To construct an array:<br>
+
+<i>new datatype [x];<br></i>
+
+New simply declares your intention to make a new array, the datatype should match the previous one in the reference, and x represents how many values are going to be in your array.
+To put data into the array, all you have to do is to set the value of an array at a certain index to a certain value that matches the datatype.<br>
+
+<i>Name [ x ] = value;<br></i>
+
+Name is the name of the array, x is the index and value is whatever you want to set to that index. To access data at a point in an array, you just call information from the array.<br>
+
+<i>Name [ x ];<br></i>
+
+                Name is the name of the array you want to access and x is the index at which you want to pull data from.</p>
+            <p style="font-size: 36px !important; text-align: center;"><b>For extra help:</b><br><a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html">Arrays (The Java Tutorial)</a><br><a href="http://www.tutorialspoint.com/java/java_arrays.htm">Java - Arrays</a><br><iframe width="560" height="315" src="//www.youtube.com/embed/L06uGnF4IpY" frameborder="0" allowfullscreen></iframe></p>
+            <br><p style="font-size: 36px !important; text-align: center;"><b>Quiz:<br> Which statement would make the 3rd number of the array "10"?</b><br>int[] letters = {1, 13, 23, 5, 16, 2, 4}</p>
+            <form style="text-align: center">
+                <input type="radio" name="end" id="array1" value="array1"> numbers[0] = 10;<br>
+                <input type="radio" name="end" id="array2" value="array2"> numbers[1] = 10;<br>
+                <input onclick="success();" type="radio" name="end" id="array2" value="array2"> numbers[2] = 10;<br>
+                <input type="radio" name="end" id="array2" value="array2"> numbers[3] = 10;<br>
+                <input type="radio" name="end" id="array2" value="array2"> numbers[4] = 10;
+            </form>
+        <a id="submitButton" href="/android/chapters/chapter6.html" class="disabled btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">Chapter 6 --></a>    
+        <a href="/android/chapters/chapter4.html" class=" btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">&lt;-- Chapter 4</a>
+        
+        <a href="/android/chapters.html" class="btn-xlarge btn-info" style="float: left; margin-bottom: 20px;">&lt;-- Head back to the Chapter list</a>
+        
+    </div>
+    <div class="modal fade" id="contact" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Contact</h4> 
+                </div>
+                <div class="modal-body">
+                    <p>Add me on Skype :
+                        <a href="skype:greenlittleapple890?chat">
+                            <img src="/images/skype.png" alt="greenlittleapple890" />
+                        </a>
+                    </p>
+                    <p>Email me at <a href="mailto:greenlittleapple@gmail.com" target="_blank">greenlittleapple@gmail.com</a>
+                    </p>
+                    <p>Add me on Steam : <a href="http://steamcommunity.com/profiles/76561198045938288/">Commander Apple</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

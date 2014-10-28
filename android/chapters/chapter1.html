@@ -5,11 +5,18 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Appler - Main</title>
+    <title>Appler - Basic Syntax</title>
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/flat-ui.min.css" rel="stylesheet">
+    <script type="text/javascript">
+        function success() {
+            alert("Correct!");
+            document.getElementById("submitButton").disabled = false;
+            document.getElementById("submitButton").className = "btn-xlarge btn-success";
+        }
+    </script>
 </head>
 
 <body>
@@ -24,18 +31,18 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li>
                         <a href="/">Home</a>
                     </li>
                     <li>
                         <a href="/about.html">About</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Android</a>
                         <ul class="dropdown-menu">
                             <li><a href="/android/intro.html">1 - Introduction</a>
                             </li>
-                            <li><a href="/android/chapters.html">2 - Chapters</a>
+                            <li class="active"><a href="/android/chapters.html">2 - Chapters</a>
                             </li>
                             <li><a href="/android/practice.html">3 - Practice Exercises</a>
                             </li>
@@ -52,15 +59,21 @@
         <!--/.nav-collapse -->
     </div>
     <div class="container-fluid jumbotron text-center">
-        <h1>WELCOME TO APPLER</h1>
-        <p>Learn Android programming for free!</p>
+        <h1>BASIC SYNTAX</h1>
+        <p>Learn about the basic punctuation and syntax of Java</p>
     </div>
     <div class="container">
         <div class="row">
-            <p style="font-size: 24px; text-align: center;">Appler provides a simple plan that provides in-depth instructions to making Android apps. With video and text tutorials that are easy to follow, Appler can make sure learning how to make an app is as simple as it can be.</p>
-            <a href="/android/intro.html" class="btn-xxlarge btn-success center">Get Started</a>
+            <h1 id="nl">Basic Syntax and Java</h1>
+            <p style="font-size: 24px">Java is an <i>object-oriented</i> programming language. This means that any code is directed towards <i>objects</i> that you create. You control these objects using sets of instructions called <i>methods</i>, and what you can do with them is limitless. Overall, the Java syntax is very simple to learn and to use.<br><br>The main thing to remember is that for most statements that you will make in Java you will need a <i>semicolon at the end</i> of it. The semicolon signals Java that you are done with that particular segment of code. <br><br>The next most important thing to remember is that any block of code that has been declared has to be in <i>curly braces ( { } )</i> these signify the start and end of the declared code.<br><br> Two statements that should be known are the <i>System.out.print()</i> and <i>System.out.println()</i> commands. System.out.print() prints out whatever is in the paretheses, but System.out.println() prints out whatever is in the parentheses but also moves down a line. <br><br>The final thing you need to keep in mind is that any parameters you have for any method go into <i>parentheses</i>.<br><br></p><p style="font-size: 36px !important; text-align: center;"><b>For extra help:</b><br><a href="http://www.tutorialspoint.com/java/java_basic_syntax.htm">Java Basic Syntax</a><br><a href="http://en.wikipedia.org/wiki/Java_syntax#Basics">Java Syntax - Basics</a><br><iframe width="560" height="315" src="//www.youtube.com/embed/OL1xrsZAowM" frameborder="0" allowfullscreen></iframe></p><br><p style="font-size: 36px !important; text-align: center;"><b>Quiz:</b><br>You put a _ at the end of almost every statement in Java</p>
+            <form style="text-align: center">
+                <input type="radio" name="end" id="bracket" value="{}"> {}<br>
+                <input type="radio" name="end" id="parentheses" value="()"> ()<br>
+                <input onclick="success();" type="radio" name="end" id="semicolon" required value=";"> ;
+            </form>
         </div>
-        &nbsp;
+        <a id="submitButton" href="/android/chapters/chapter2.html" class=" disabled btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">Continue on to Chapter 2 --></a>
+        <a href="/android/chapters.html" class="btn-xlarge btn-info" style="float: left; margin-bottom: 20px;">&lt;-- Head back to the Chapter list</a>
         
     </div>
     <div class="modal fade" id="contact" role="dialog">
