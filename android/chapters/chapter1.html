@@ -1,88 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link href="http://www.appler.pw/images/favicon.ico?v=2" rel=
+    <head>
+        <link href="http://www.appler.pw/images/favicon.ico?v=2" rel=
             "shortcut icon">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="User-friendly and visually appealing Java and Android tutorials">
-    <title>Appler - Basic Syntax</title>
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/flat-ui.min.css" rel="stylesheet">
-    <script type="text/javascript">
-        function success() {
-            alert("Correct!");
-            document.getElementById("submitButton").disabled = false;
-            document.getElementById("submitButton").className = "btn-xlarge btn-success";
-        }
-    </script>
-</head>
-
-<body>
-    <div class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>
-                </button>
-                <a href="/">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta name="description" content="User-friendly and visually appealing Java and Android tutorials">
+        <title>Appler - Basic Syntax</title>
+        <!-- Bootstrap -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/flat-ui.min.css" rel="stylesheet">
+        <script type="text/javascript">
+            function success() {
+                alert("Correct!");
+                document.getElementById("submitButton").disabled = false;
+                document.getElementById("submitButton").className = "btn-xlarge btn-success";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>
+                    </button>
+                    <a href="/">
                     <img src="/images/resized.png" style="width: 50px; height: auto; float: left; margin-right: 9px; margin-top: 35px;">
-                </a><a class="navbar-brand" href="/" style="color: #27AE60">APPLER</a>
+                    </a><a class="navbar-brand" href="/" style="color: #27AE60">APPLER</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">About</a>
+                        </li>
+                        <li class="active">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Android</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/android/intro.html">1 - Introduction</a>
+                                </li>
+                                <li class="active"><a href="/android/chapters.html">2 - Chapters</a>
+                                </li>
+                                <li><a href="/android/practice.html">3 - Practice Exercises</a>
+                                </li>
+                                <li><a href="/android/android.html">4 - Android Basics</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about.html">About</a>
-                    </li>
-                    <li class="active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Android</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/android/intro.html">1 - Introduction</a>
-                            </li>
-                            <li class="active"><a href="/android/chapters.html">2 - Chapters</a>
-                            </li>
-                            <li><a href="/android/practice.html">3 - Practice Exercises</a>
-                            </li>
-                            <li><a href="/android/android.html">4 - Android Basics</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a data-toggle="modal" href="#contact">Contact</a>
-                    </li>
-                </ul>
+            <!--/.nav-collapse -->
+        </div>
+        <div class="container-fluid jumbotron text-center">
+            <h1>BASIC SYNTAX</h1>
+            <p>Learn about the basic punctuation and syntax of Java</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h1 id="nl">Basic Syntax and Java</h1>
+                <p style="font-size: 24px">Java is an <i>object-oriented</i> programming language. This means that any code is directed towards <i>objects</i> that you create. You control these objects using sets of instructions called <i>methods</i>, and what you can do with them is limitless. Overall, the Java syntax is very simple to learn and to use.<br><br>The main thing to remember is that for most statements that you will make in Java you will need a <i>semicolon at the end</i> of it. The semicolon signals Java that you are done with that particular segment of code. <br><br>The next most important thing to remember is that any block of code that has been declared has to be in <i>curly braces ( { } )</i> these signify the start and end of the declared code.<br><br> Two statements that should be known are the <i>System.out.print()</i> and <i>System.out.println()</i> commands. System.out.print() prints out whatever is in the paretheses, but System.out.println() prints out whatever is in the parentheses but also moves down a line. <br><br>The final thing you need to keep in mind is that any parameters you have for any method go into <i>parentheses</i>.<br><br></p>
+                <p style="font-size: 36px !important; text-align: center;"><b>For extra help:</b><br><a href="http://www.tutorialspoint.com/java/java_basic_syntax.htm">Java Basic Syntax</a><br><a href="http://en.wikipedia.org/wiki/Java_syntax#Basics">Java Syntax - Basics</a><br><iframe width="560" height="315" src="//www.youtube.com/embed/OL1xrsZAowM" frameborder="0" allowfullscreen></iframe></p>
+                <br>
+                <p style="font-size: 36px !important; text-align: center;"><b>Quiz:</b><br>You put a _ at the end of almost every statement in Java</p>
+                <form style="text-align: center">
+                    <input type="radio" name="end" id="bracket" value="{}"> {}<br>
+                    <input type="radio" name="end" id="parentheses" value="()"> ()<br>
+                    <input onclick="success();" type="radio" name="end" id="semicolon" required value=";"> ;
+                </form>
+            </div>
+            <a id="submitButton" href="/android/chapters/chapter2.html" class=" disabled btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">Continue on to Chapter 2 --></a>
+            <a href="/android/chapters.html" class="btn-xlarge btn-info" style="float: left; margin-bottom: 20px;">&lt;-- Head back to the Chapter list</a>
+        </div>
+        <div class = "modal fade" id = "contact" role = "dialog">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+                    <div class = "modal-header">
+                        <h4>Contact</h4>
+                    </div>
+                    <div class = "modal-body">
+                        <p> Add me on Skype :                 <a href="skype:greenlittleapple890?chat"><img src="/images/skype.png" alt = "greenlittleapple890"/></a></p>
+                        <p>Email me at <a href = "mailto:support@appler.pw" target="_blank">support@appler.pw</a></p>
+                        <p>Add me on Steam : <a href="http://steamcommunity.com/profiles/76561198045938288/">Commander Apple</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--/.nav-collapse -->
-    </div>
-    <div class="container-fluid jumbotron text-center">
-        <h1>BASIC SYNTAX</h1>
-        <p>Learn about the basic punctuation and syntax of Java</p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <h1 id="nl">Basic Syntax and Java</h1>
-            <p style="font-size: 24px">Java is an <i>object-oriented</i> programming language. This means that any code is directed towards <i>objects</i> that you create. You control these objects using sets of instructions called <i>methods</i>, and what you can do with them is limitless. Overall, the Java syntax is very simple to learn and to use.<br><br>The main thing to remember is that for most statements that you will make in Java you will need a <i>semicolon at the end</i> of it. The semicolon signals Java that you are done with that particular segment of code. <br><br>The next most important thing to remember is that any block of code that has been declared has to be in <i>curly braces ( { } )</i> these signify the start and end of the declared code.<br><br> Two statements that should be known are the <i>System.out.print()</i> and <i>System.out.println()</i> commands. System.out.print() prints out whatever is in the paretheses, but System.out.println() prints out whatever is in the parentheses but also moves down a line. <br><br>The final thing you need to keep in mind is that any parameters you have for any method go into <i>parentheses</i>.<br><br></p><p style="font-size: 36px !important; text-align: center;"><b>For extra help:</b><br><a href="http://www.tutorialspoint.com/java/java_basic_syntax.htm">Java Basic Syntax</a><br><a href="http://en.wikipedia.org/wiki/Java_syntax#Basics">Java Syntax - Basics</a><br><iframe width="560" height="315" src="//www.youtube.com/embed/OL1xrsZAowM" frameborder="0" allowfullscreen></iframe></p><br><p style="font-size: 36px !important; text-align: center;"><b>Quiz:</b><br>You put a _ at the end of almost every statement in Java</p>
-            <form style="text-align: center">
-                <input type="radio" name="end" id="bracket" value="{}"> {}<br>
-                <input type="radio" name="end" id="parentheses" value="()"> ()<br>
-                <input onclick="success();" type="radio" name="end" id="semicolon" required value=";"> ;
-            </form>
-        </div>
-        <a id="submitButton" href="/android/chapters/chapter2.html" class=" disabled btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">Continue on to Chapter 2 --></a>
-        <a href="/android/chapters.html" class="btn-xlarge btn-info" style="float: left; margin-bottom: 20px;">&lt;-- Head back to the Chapter list</a>
-        
-    </div>
-    <?php include("/modal.php"); ?>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-</body>
-
+        <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');      ga('create', 'UA-53859915-1', 'auto');     ga('send', 'pageview'); </script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    </body>
 </html>

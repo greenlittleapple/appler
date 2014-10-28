@@ -1,90 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link href="http://www.appler.pw/images/favicon.ico?v=2" rel=
+    <head>
+        <link href="http://www.appler.pw/images/favicon.ico?v=2" rel=
             "shortcut icon">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="description" content="User-friendly and visually appealing Java and Android tutorials">
-    <title>Appler - Loops</title>
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/flat-ui.min.css" rel="stylesheet">
-    <script type="text/javascript">
-        function success() {
-            alert("Correct!");
-            document.getElementById("submitButton").disabled = false;
-            document.getElementById("submitButton").className = "btn-xlarge btn-success";
-        }
-    </script>
-</head>
-
-<body>
-    <div class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>
-                </button>
-                <a href="/">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta name="description" content="User-friendly and visually appealing Java and Android tutorials">
+        <title>Appler - Loops</title>
+        <!-- Bootstrap -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/flat-ui.min.css" rel="stylesheet">
+        <script type="text/javascript">
+            function success() {
+                alert("Correct!");
+                document.getElementById("submitButton").disabled = false;
+                document.getElementById("submitButton").className = "btn-xlarge btn-success";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>
+                    </button>
+                    <a href="/">
                     <img src="/images/resized.png" style="width: 50px; height: auto; float: left; margin-right: 9px; margin-top: 35px;">
-                </a><a class="navbar-brand" href="/" style="color: #27AE60">APPLER</a>
+                    </a><a class="navbar-brand" href="/" style="color: #27AE60">APPLER</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">About</a>
+                        </li>
+                        <li class="active">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Android</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/android/intro.html">1 - Introduction</a>
+                                </li>
+                                <li class="active"><a href="/android/chapters.html">2 - Chapters</a>
+                                </li>
+                                <li><a href="/android/practice.html">3 - Practice Exercises</a>
+                                </li>
+                                <li><a href="/android/android.html">4 - Android Basics</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about.html">About</a>
-                    </li>
-                    <li class="active">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Android</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/android/intro.html">1 - Introduction</a>
-                            </li>
-                            <li class="active"><a href="/android/chapters.html">2 - Chapters</a>
-                            </li>
-                            <li><a href="/android/practice.html">3 - Practice Exercises</a>
-                            </li>
-                            <li><a href="/android/android.html">4 - Android Basics</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a data-toggle="modal" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <!--/.nav-collapse -->
         </div>
-        <!--/.nav-collapse -->
-    </div>
-    <div class="container-fluid jumbotron text-center">
-        <h1>LOOPS</h1>
-        <p>Learn about the types of variables of Java</p>
-    </div>
-    <div class="container">
+        <div class="container-fluid jumbotron text-center">
+            <h1>LOOPS</h1>
+            <p>Learn about the types of variables of Java</p>
+        </div>
+        <div class="container">
         <div class="row">
             <h1 id="nl">Loops</h1>
-            <p style="font-size: 24px">Loops are useful when you want to complete a repeated set of instructions over and over. There are two main types of loops in Java: <i>for</i> loops and <i>while</i> loops. <br><br>For loops are generally used when the number of iterations (repetitions) are known before the execution of the loop The format for writing a for loop is : <br><br><i>for(int i = 0; i < (number of repetitions you want); i++) { <br> [code] <br>} </i><br><br>While loops are used when the number of iterations is unknown. Each has their own syntax for writing, and each has its own situation that they’re best used in. The format for writing a while loop is : <br><br><i>while(boolean) {<br>[code]<br>}</i><br><br>For example, if you want to create a line of robots and also store them into an array (more on arrays later), a for loop would be the best choice. If you have an array with an unknown amount of integers and you want to print each one, a while loop would be best. Although the uses for each loop are different, they both check to see if a certain condition is met to decide whether or not to continue iterating.</p><p style="font-size: 36px !important; text-align: center;"><b>For extra help:</b><br><a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html">The while and do-while statements</a><br><a href="http://www.tutorialspoint.com/java/java_loop_control.htm">Java Loops</a><br><iframe width="560" height="315" src="//www.youtube.com/embed/cVGK_oO-n1A" frameborder="0" allowfullscreen></iframe></p>
-            <br><p style="font-size: 36px !important; text-align: center;"><b>Quiz:</b><br>You use a ___ loop for unknown counts and a ___ loop for known counts.</p>
+            <p style="font-size: 24px">Loops are useful when you want to complete a repeated set of instructions over and over. There are two main types of loops in Java: <i>for</i> loops and <i>while</i> loops. <br><br>For loops are generally used when the number of iterations (repetitions) are known before the execution of the loop The format for writing a for loop is : <br><br><i>for(int i = 0; i < (number of repetitions you want); i++) { <br> [code] <br>} </i><br><br>While loops are used when the number of iterations is unknown. Each has their own syntax for writing, and each has its own situation that they’re best used in. The format for writing a while loop is : <br><br><i>while(boolean) {<br>[code]<br>}</i><br><br>For example, if you want to create a line of robots and also store them into an array (more on arrays later), a for loop would be the best choice. If you have an array with an unknown amount of integers and you want to print each one, a while loop would be best. Although the uses for each loop are different, they both check to see if a certain condition is met to decide whether or not to continue iterating.</p>
+            <p style="font-size: 36px !important; text-align: center;"><b>For extra help:</b><br><a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html">The while and do-while statements</a><br><a href="http://www.tutorialspoint.com/java/java_loop_control.htm">Java Loops</a><br><iframe width="560" height="315" src="//www.youtube.com/embed/cVGK_oO-n1A" frameborder="0" allowfullscreen></iframe></p>
+            <br>
+            <p style="font-size: 36px !important; text-align: center;"><b>Quiz:</b><br>You use a ___ loop for unknown counts and a ___ loop for known counts.</p>
             <form style="text-align: center">
                 <input type="radio" name="end" id="forfor" value="for...for"> for...for<br>
                 <input type="radio" name="end" id="forwhile" value="for...while"> for...while<br>
                 <input onclick="success();" type="radio" name="end" id="whilefor" value="while...for"> while...for<br>
                 <input type="radio" name="end" id="whilewhile" value="while...while"> while...while
             </form>
-        <a id="submitButton" href="/android/chapters/chapter4.html" class="disabled btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">Chapter 4 --></a>
-        <a href="/android/chapters/chapter2.html" class="btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">&lt;-- Chapter 2</a>
-        <a href="/android/chapters.html" class="btn-xlarge btn-info" style="float: left; margin-bottom: 20px;">&lt;-- Head back to the Chapter list</a>
-        
-    </div>
-    <?php include("/modal.php"); ?>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-</body>
-
+            <a id="submitButton" href="/android/chapters/chapter4.html" class="disabled btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">Chapter 4 --></a>
+            <a href="/android/chapters/chapter2.html" class="btn-xlarge btn-danger" style="float: right; margin-bottom: 20px;">&lt;-- Chapter 2</a>
+            <a href="/android/chapters.html" class="btn-xlarge btn-info" style="float: left; margin-bottom: 20px;">&lt;-- Head back to the Chapter list</a>
+        </div>
+        <div class = "modal fade" id = "contact" role = "dialog">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+                    <div class = "modal-header">
+                        <h4>Contact</h4>
+                    </div>
+                    <div class = "modal-body">
+                        <p> Add me on Skype :                 <a href="skype:greenlittleapple890?chat"><img src="/images/skype.png" alt = "greenlittleapple890"/></a></p>
+                        <p>Email me at <a href = "mailto:support@appler.pw" target="_blank">support@appler.pw</a></p>
+                        <p>Add me on Steam : <a href="http://steamcommunity.com/profiles/76561198045938288/">Commander Apple</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');      ga('create', 'UA-53859915-1', 'auto');     ga('send', 'pageview'); </script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    </body>
 </html>
